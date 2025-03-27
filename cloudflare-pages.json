@@ -1,0 +1,7 @@
+{
+  "framework": "static",
+  "build": {
+    "command": "cp -r * _dist/",
+    "directory": "_dist"
+  }
+}
