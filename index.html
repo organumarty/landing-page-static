@@ -1,34 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Cannot be found</title>
+    <title>HEJ PROC JSES TAKOVEJ</title>
     <style>
-        html, body {
-            height: 100%;
+        body {
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: white;
+            min-height: 100vh;
         }
         img {
-            max-width: 95%;
-            max-height: 95vh;
+            max-width: 100%;
+            height: auto;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <img src="img/hej-image.jpg" alt="HEJ PROC JSES TAKOVEJ" onclick="downloadFile(event)">
-
+    <img src="img/hej-image.jpg" alt="HEJ PROC JSES TAKOVEJ" onclick="downloadNE()">
+    
     <script>
-        function downloadFile(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const link = document.createElement('a');
+        function downloadNE() {
+            var link = document.createElement('a');
             link.href = 'NE.wav';
             link.download = 'NE.wav';
             document.body.appendChild(link);
