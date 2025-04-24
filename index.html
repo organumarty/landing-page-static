@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>DV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         body {
             margin: 0;
@@ -11,10 +12,11 @@
             align-items: center;
             min-height: 100vh;
             background-color: #e9e9e9; /* Match the light gray background of the image */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         .image-container {
-            width: 60%; /* Reduced from 80% to 60% */
-            max-width: 700px; /* Reduced from 1000px to 700px */
+            width: 90%; /* Wider on all devices */
+            max-width: 700px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,6 +29,21 @@
             mix-blend-mode: multiply; /* This makes white transparent and preserves dark text */
             opacity: 0.9; /* Slightly reduce opacity to blend better */
             filter: contrast(1.1); /* Increase contrast slightly to make text more visible */
+        }
+        
+        /* Mobile-specific styles */
+        @media only screen and (max-width: 768px) {
+            body {
+                padding: 0 10px; /* Add padding to avoid edge touching */
+            }
+            .image-container {
+                width: 95%; /* Almost full width on mobile */
+                max-width: 100%;
+            }
+            img {
+                transform: scale(1.3); /* Make text appear larger on mobile */
+                filter: contrast(1.2); /* Increase contrast more on mobile */
+            }
         }
     </style>
 </head>
