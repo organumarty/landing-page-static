@@ -6,75 +6,30 @@
     <title>Cannot be found</title>
     <style>
         html, body {
-            overflow: hidden;
             height: 100%;
-            width: 100%;
-            position: fixed;
             margin: 0;
             padding: 0;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: white;
-            font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-            overflow: hidden;
         }
-        .container {
-            text-align: center;
+        .image-container {
             cursor: pointer;
-            user-select: none;
-            -webkit-user-select: none;
-            padding: 40px;
-            width: 90%;
-            max-width: 800px;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #e9e9e9;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border: 1px solid #d0d0d0;
+            max-width: 90%;
+            max-height: 90vh;
+            text-align: center;
         }
-        /* Mobile adjustment */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 20px;
-            }
-        }
-        .text-content {
-            font-size: 32px;
-            line-height: 1.5;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-        .bold-text {
-            font-weight: 800;
-            font-size: 38px;
-            margin-bottom: 30px;
-            color: #000000;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        .clickable-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="bold-text">HEJ PROC JSES TAKOVEJ</div>
-        <div class="text-content">Cannot be found</div>
-        <div class="text-content">I was searching for a long time</div>
-        <div class="text-content">For someone like u</div>
-        <div class="text-content">Someone like i mean</div>
+    <div class="image-container">
+        <img src="img/HEJ%20PROC%20JSES%20TAKOVEJ_pages-to-jpg-0001.jpg" alt="HEJ PROC JSES TAKOVEJ" class="clickable-image">
     </div>
 
     <script>
@@ -89,8 +44,8 @@
             document.body.removeChild(link);
         }
 
-        // Add click handler to the container
-        document.querySelector('.container').addEventListener('click', downloadFile);
+        // Add click handler to the image container
+        document.querySelector('.image-container').addEventListener('click', downloadFile);
     </script>
 </body>
 </html>
