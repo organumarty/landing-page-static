@@ -14,23 +14,15 @@
             align-items: center;
             background-color: white;
         }
-        .image-container {
+        img {
+            max-width: 95%;
+            max-height: 95vh;
             cursor: pointer;
-            max-width: 90%;
-            max-height: 90vh;
-            text-align: center;
-        }
-        .clickable-image {
-            max-width: 100%;
-            max-height: 90vh;
-            object-fit: contain;
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="img/HEJ%20PROC%20JSES%20TAKOVEJ_pages-to-jpg-0001.jpg" alt="HEJ PROC JSES TAKOVEJ" class="clickable-image">
-    </div>
+    <img src="img/hej-image.jpg" alt="HEJ PROC JSES TAKOVEJ" onclick="downloadFile(event)">
 
     <script>
         function downloadFile(e) {
@@ -43,9 +35,6 @@
             link.click();
             document.body.removeChild(link);
         }
-
-        // Add click handler to the image container
-        document.querySelector('.image-container').addEventListener('click', downloadFile);
     </script>
 </body>
 </html>
