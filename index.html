@@ -10,16 +10,32 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .image-container {
+            width: 80%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             cursor: pointer;
+            object-fit: contain;
+            image-rendering: -webkit-optimize-contrast; /* For Chrome */
+            image-rendering: crisp-edges; /* For Firefox */
+            -ms-interpolation-mode: nearest-neighbor; /* For IE */
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
-    <img src="img/hej-image.jpg" alt="HEJ PROC JSES TAKOVEJ" onclick="downloadNE()">
+    <div class="image-container">
+        <img src="img/hej-image.jpg" alt="HEJ PROC JSES TAKOVEJ" onclick="downloadNE()">
+    </div>
     
     <script>
         function downloadNE() {
