@@ -30,35 +30,48 @@
             cursor: pointer;
             user-select: none;
             -webkit-user-select: none;
-            padding: 20px;
+            padding: 40px;
             width: 90%;
             max-width: 800px;
             -webkit-tap-highlight-color: rgba(0,0,0,0);
             box-sizing: border-box;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f7f7f7;
+            background-color: #f9f9f9;
             border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         /* Mobile adjustment */
         @media (max-width: 768px) {
             .container {
                 width: 95%;
+                padding: 20px;
             }
         }
-        .pdf-image {
-            max-width: 100%;
-            max-height: 80vh;
-            object-fit: contain;
-            border: 2px solid #ccc;
-            background-color: white;
+        .text-content {
+            font-size: 28px;
+            line-height: 1.5;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .bold-text {
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #111;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="pdf-image" src="assets/hej-proc-jses-takovej.png" alt="HEJ PROC JSES TAKOVEJ">
+        <div class="bold-text">HEJ PROC JSES TAKOVEJ</div>
+        <div class="text-content">Cannot be found</div>
+        <div class="text-content">I was searching for a long time</div>
+        <div class="text-content">For someone like u</div>
+        <div class="text-content">Someone like i mean</div>
     </div>
 
     <script>
