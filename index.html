@@ -24,10 +24,9 @@
             height: auto;
             cursor: pointer;
             object-fit: contain;
-            image-rendering: -webkit-optimize-contrast; /* For Chrome */
-            image-rendering: crisp-edges; /* For Firefox */
-            -ms-interpolation-mode: nearest-neighbor; /* For IE */
-            box-shadow: none; /* Removed shadow for cleaner look */
+            mix-blend-mode: multiply; /* This makes white transparent and preserves dark text */
+            opacity: 0.9; /* Slightly reduce opacity to blend better */
+            filter: contrast(1.1); /* Increase contrast slightly to make text more visible */
         }
     </style>
 </head>
